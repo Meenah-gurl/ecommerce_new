@@ -8,16 +8,14 @@ function App() {
   return (
         <>
           <Navbar />
-
-          {/* main content and side bar */}
-
-          <div className=" bg-gray-100">
-            {/* side bar */}
-            <div className='grid grid-rows-3 flex-col lg:block md: '>
-               gcg
-            </div>
-          
-          </div>
+          {/* <Router>
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/products' component={Products} />
+              <Route path='/services' component={Services} />
+              <Route path='/sign-up' component={SignUp} />
+            </Switch>
+          </Router> */}
           <div>
             {/* main content */}
             <div className='h-screen '>

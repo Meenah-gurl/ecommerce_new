@@ -31,6 +31,49 @@ code {
 
 
 #button{
-  @apply py-2 px-6 bg-green-600 rounded-full text-white font-bold hover:bg-green-500 transition duration-300 ease-in-out w-fit;
+  @apply py-3 px-6 bg-[#f4952c] rounded-full text-white font-bold transition duration-300 ease-in-out w-fit;
 }
+
+nav .tab a.active{
+  color: #f4952c;
+}
+
+.modal {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  display: none;
+  z-index: 1;
+}
+
+#modalImage{
+  background-image: url("../public/cart.jpg");
+  background-position: center center;
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.modal #modalImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.button:hover + .modal {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  /* #blackheader {
+   
+  } */
+}
+  
+
+
 
