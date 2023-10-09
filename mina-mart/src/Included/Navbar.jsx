@@ -20,16 +20,24 @@ const Navbar =() => {
   document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('.button');
     const modal = document.querySelector('.modal');
+
+    button.addEventListener('mouseover', () => {
+        modal.style.display = 'block';
+      });
+      
+      button.addEventListener('mouseout', () => {
+        modal.style.display = 'none';
+      });
   
-    button.addEventListener('mouseleave', () => {
-      modal.style.display = 'none';
-    });
+    // button.addEventListener('mouseleave', () => {
+    //   modal.style.display = 'none';
+    // });
   });
 
   return (
     <Fragment>
-        <div>
-            <div className='bg-black text-gray-400 w-full px-12 py-4'>
+        <div className=''>
+            <div className='bg-black text-gray-400 w-full px-12 py-4 '>
                 <div id="blackheader" className='lg:flex lg:justify-between '>
                     <div className='flex justify-center gap-2'>
                         <span className=' hover:text-white cursor-pointer ease-in'><a href="#">Login</a></span>
@@ -97,10 +105,10 @@ const Navbar =() => {
                         <div className='rounded-full h-10 w-10 p-3 mt-1 bg-gray-300'><FiSearch/></div>
                     </div>
                     <div className='lg:flex hidden'>
-                        <button id='button' className='button flex gap-2'>Basket (0) <PiHandbagLight className='mt-1'/></button>
-                        <div className='modal bg-red-700 rounded-md py-4 px-4'>
-                            <div id='modalImage'>
-                                <p className='text-gray-400'>CART IS EMPTY</p>
+                        <button id='myButton' className='button flex gap-2'>Basket (0) <PiHandbagLight className='mt-1'/></button>
+                        <div id='myModal' className='modal shadow-sm shadow-white bg-red-800 rounded-md py-4 px-4 w-96 h-60'>
+                            <div id='modalImage' className='w-24  absolute right-0 left-32 top-10 flex justify-center items-center'>
+                                <p className='text-gray-400 font-bold text-center'>CART IS EMPTY</p>
                             </div>
                         </div>
                     </div>

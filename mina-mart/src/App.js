@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './Included/Navbar';
 import './index.css';
 import Footer from './Included/Footer';
+import Home from './Pages/Home';
+import About from './Pages/About';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -16,15 +18,13 @@ function App() {
               <Route path='/sign-up' component={SignUp} />
             </Switch>
           </Router> */}
-          <div>
+          <div className='bg-[#ffffff]'>
             {/* main content */}
-            <div className='h-screen '>
-                gcg
+            <div className='space-y-2'>
+                <Home/>
+                <About/>
             </div>
           </div>
-
-
-         
 
           <Footer />
         
