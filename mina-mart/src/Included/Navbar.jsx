@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState,} from 'react';
 import { HiMail } from 'react-icons/hi';
 import {FiSmartphone} from 'react-icons/fi'
 import {FiSearch} from 'react-icons/fi'
@@ -38,14 +38,14 @@ const Navbar =() => {
     <Fragment>
         <div className=''>
             <div className='bg-black text-gray-400 w-full px-12 py-4 '>
-                <div id="blackheader" className='lg:flex lg:justify-between '>
+                <div id="blackheader" className='lg:flex lg:justify-between md:justify-between md:flex gap-2 '>
                     <div className='flex justify-center gap-2'>
                         <span className=' hover:text-white cursor-pointer ease-in'><a href="#">Login</a></span>
                         <hr className='border-r-3 border-gray-600 w-4 rotate-90 mt-3' />
                         <span className='hover:text-white cursor-pointer ease-in'><a href="#">Signup</a></span>
                     </div>
 
-                    <div className='flex text-center lg:text-start  lg:gap-2'>
+                    <div className='flex text-center lg:text-start  lg:gap-2 md:gap-2'>
                         <span className='flex gap-1'><FiSmartphone className='mt-1'/>+86.36.166</span>
                         <hr className='border-r-3 border-gray-600 w-4 rotate-90 mt-3 hidden  lg:block' />
                         <span className='flex gap-1'><HiMail className='mt-2'/>contact@yourdomain.com</span>
@@ -82,19 +82,19 @@ const Navbar =() => {
                     </button>
                 </div>
                 <div className={`tab md:flex flex-grow text-gray-700 ${isOpen ? 'block' : 'hidden'}`} >
-                    <a href="#" className={activeTab === 'home' ? 'active' : 'text-black font-bold mx-5'} onClick={() => handleTabClick('home')} >
+                    <a link ="/" className={activeTab === 'home' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('home')} >
                         Home
                     </a>
-                    <a href="#" className={activeTab === 'about' ? 'active' : 'mx-5'} onClick={() => handleTabClick('about')} >
+                    <a link to="/about" className={activeTab === 'about' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('about')} >
                         About
                     </a>
-                    <a href="#" className={activeTab === 'shop' ? 'active' : 'mx-5'} onClick={() => handleTabClick('shop')} >
+                    <a link to = "/shop" className={activeTab === 'shop' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('shop')} >
                         Shop
                     </a>
-                    <a href="#" className={activeTab === 'blog' ? 'active' : 'mx-5'} onClick={() => handleTabClick('blog')} >
+                    <a link to = "/blog"  className={activeTab === 'blog' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('blog')} >
                         Blog
                     </a>
-                    <a href="#" className= {activeTab === 'contact' ? 'active' : 'mx-5'} onClick={() => handleTabClick('contact')} >
+                    <a link to = "/contact"  className= {activeTab === 'contact' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('contact')} >
                         Contact
                     </a>
                 </div>
