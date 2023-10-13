@@ -83,19 +83,19 @@ const Navbar =() => {
                     </button>
                 </div>
                 <div className={`tab md:flex flex-grow text-gray-700 ${isOpen ? 'block' : 'hidden'}`} >
-                    <a link to ="/" className={activeTab === 'home' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('home')} >
+                    <a link to ="/" className={activeTab === 'home' ? 'active' : 'mx-5 block mt-4 md:inline-block md:mt-0 hover:text-gray-700 ease-in cursor-pointer'} onClick={() => handleTabClick('home')} >
                         Home
                     </a>
-                    <a link to="/about" className={activeTab === 'about' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('about')} >
+                    <a link to="/about" className={activeTab === 'about' ? 'active' : 'mx-5 block mt-4 md:inline-block md:mt-0 hover:text-gray-700 ease-in cursor-pointer '} onClick={() => handleTabClick('about')} >
                         About
                     </a>
-                    <a link to = "/shop" className={activeTab === 'shop' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('shop')} >
+                    <a link to = "/shop" className={activeTab === 'shop' ? 'active' : 'mx-5 block mt-4 md:inline-block md:mt-0 hover:text-gray-700 ease-in cursor-pointer '} onClick={() => handleTabClick('shop')} >
                         Shop
                     </a>
-                    <a link to = "/blog"  className={activeTab === 'blog' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('blog')} >
+                    <a link to = "/blog"  className={activeTab === 'blog' ? 'active' : 'mx-5 block mt-4 md:inline-block md:mt-0 hover:text-gray-700 ease-in cursor-pointer '} onClick={() => handleTabClick('blog')} >
                         Blog
                     </a>
-                    <a link to = "/contact"  className= {activeTab === 'contact' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('contact')} >
+                    <a link to = "/contact"  className= {activeTab === 'contact' ? 'active' : 'mx-5 block mt-4 md:inline-block md:mt-0 hover:text-gray-700 ease-in cursor-pointer '} onClick={() => handleTabClick('contact')} >
                         Contact
                     </a>
                 </div>
@@ -107,9 +107,9 @@ const Navbar =() => {
                     </div>
                     <div className='lg:flex hidden'>
                         <button id='myButton' className='button flex gap-2'>Basket (0) <PiHandbagLight className='mt-1'/></button>
-                        <div id='myModal' className='modal shadow-sm shadow-white bg-red-800 rounded-md py-4 px-4 w-96 h-60'>
-                            <div id='modalImage' className='w-24  absolute right-0 left-32 top-10 flex justify-center items-center'>
-                                <p className='text-gray-400 font-bold text-center'>CART IS EMPTY</p>
+                        <div id='myModal' className='modal shadow-sm shadow-white bg-gray-100 rounded-md py-4 px-4 w-96 h-60'>
+                            <div id='modalImage' className='max-w-fit  absolute right-0 left-32 top-10 flex justify-center items-center'>
+                                <p className='text-gray-400 font-bold mt-36 flex'>CART IS EMPTY</p>
                             </div>
                         </div>
                     </div>
