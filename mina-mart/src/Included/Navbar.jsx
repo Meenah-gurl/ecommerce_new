@@ -3,6 +3,7 @@ import { HiMail } from 'react-icons/hi';
 import {FiSmartphone} from 'react-icons/fi'
 import {FiSearch} from 'react-icons/fi'
 import {PiHandbagLight} from 'react-icons/pi'
+// import { Link } from 'react-router-dom';
 
 const Navbar =() => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,7 +83,7 @@ const Navbar =() => {
                     </button>
                 </div>
                 <div className={`tab md:flex flex-grow text-gray-700 ${isOpen ? 'block' : 'hidden'}`} >
-                    <a link ="/" className={activeTab === 'home' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('home')} >
+                    <a link to ="/" className={activeTab === 'home' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('home')} >
                         Home
                     </a>
                     <a link to="/about" className={activeTab === 'about' ? 'active' : 'mx-5 cursor-pointer'} onClick={() => handleTabClick('about')} >

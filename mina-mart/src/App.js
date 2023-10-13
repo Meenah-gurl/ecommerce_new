@@ -27,7 +27,7 @@ function App() {
             {/* main content */}
             <div className='space-y-2'>
                 <Home/>
-                <About/>
+                {/* <About/> */}
             </div>
           </div>
 
